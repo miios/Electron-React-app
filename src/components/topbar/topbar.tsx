@@ -1,7 +1,5 @@
 import { handleQuit, handleMinimize } from '../../utils';
 
-const { ipcRenderer } = window.require('electron');
-
 import './topbar.css'
 
 export const Topbar = () => {
