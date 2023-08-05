@@ -1,0 +1,47 @@
+.topbar-container {
+  width: 100vw;
+  background-color: #1e2124;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  max-height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-user-select: none;
+  color: white;
+  align-items: center;
+}
+
+.topbar-title {
+  width: -webkit-fill-available;
+  -webkit-app-region: drag;
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.topbar-ipc-buttons {
+  width: 4rem;
+  height: 100%;
+}
+
+.topbar-ipc-button {
+  width: 50%;
+  height: 100%;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  &:focus { outline: none; }
+}
+
+.topbar-minimize-button {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.topbar-close-button {
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+}
