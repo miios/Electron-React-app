@@ -1,0 +1,39 @@
+.UpgradeContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+}
+
+.UpgradeBox {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 45%;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+
+.UpgradeBox ul {
+  list-style: none;
+  margin: unset;
+  padding: unset;
+}
+
+.Upgrade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e2124;
+}
+
+.buyBtn {
+  background: white;
+  border: 1px solid #999;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}

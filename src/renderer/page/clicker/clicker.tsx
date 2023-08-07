@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { Score } from './score';
-import { getInitialUpgrades } from '../../../utils/state';
+import { CookieButton } from './CookieButton/cookieButton';
+import { UpgradeList } from './upgrade/upgrade';
 
 import "./clicker.css";
 
@@ -12,6 +12,7 @@ export const Clicker = () => {
   const handleScore = (sumNumber: number) => {
     setScore((prevState) => prevState + sumNumber)
   }
+
   const handleCps = (sumNumber: number) => {
     setCps((prevState) => prevState + sumNumber)
   }
@@ -23,44 +24,10 @@ export const Clicker = () => {
     return () => clearInterval(myInterval);
   }, [cps]);
 
-  const UpgradeList = () => {
-    return (
-      <div className="UpgradeList">
-        <h3>Upgrades</h3>
-        <ul>
-          {getInitialUpgrades.map(upgrade => (
-            <li key={upgrade.id} className="Upgrade">
-              <div>
-                {upgrade.name} ({upgrade.cps}cps): {upgrade.cost}c
-              </div>
-              <button
-                className="buyBtn"
-                disabled={score < upgrade.cost}
-                onClick={() => {
-                  handleScore(-upgrade.cost)
-                  handleCps(upgrade.cps)
-                }}
-              >
-                Buy
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
-  const BigCookieButton = () => {
-    return (
-      <button className="cookieBtn" onClick={() => handleScore(1)} />
-    );
-  }
-
   return (
-    <div className="App">
-      <Score score={score} cps={cps} />
-      <BigCookieButton />
-      <UpgradeList />
+    <div className="clicker">
+      <CookieButton score={score} cps={cps} handleScore={handleScore} />
+      <UpgradeList score={score} handleScore={handleScore} handleCps={handleCps} />
     </div>
   );
 }

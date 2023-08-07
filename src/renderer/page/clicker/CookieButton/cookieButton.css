@@ -1,0 +1,30 @@
+.cookie-container {
+  width: 100%;
+  height: 40%;
+  box-shadow: 0 1px 10px 1px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.cookie-button {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: red;
+  transition: transform 0.1s;
+}
+
+.cookie-button:active {
+  transform: scale(0.95);
+}
+.cookie-button:focus {
+  outline: none;
+}
+
