@@ -28,12 +28,16 @@
   color: #1e2124;
 }
 
-.buyBtn {
+.upgrade-buy-button {
   background: white;
   border: 1px solid #999;
   padding: 10px;
   font-size: 16px;
-  border-radius: 3px;
   margin-left: 10px;
   cursor: pointer;
+  width: 30%;
+}
+
+.upgrade-buy-title {
+  width: 70%;
 }

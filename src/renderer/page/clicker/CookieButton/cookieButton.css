@@ -12,12 +12,12 @@
 }
 
 .cookie-button {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
-  background-size: cover;
+  background-image: url("/assets/cookie-click.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-color: red;
   transition: transform 0.1s;
 }
 

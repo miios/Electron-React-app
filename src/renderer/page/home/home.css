@@ -1,0 +1,79 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header-container {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e2124;
+  color: white;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.home-header-title {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes home-header-img /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes home-header-img {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.home-header-img {
+  -webkit-animation: home-header-img 10s linear infinite;
+  -moz-animation: home-header-img 10s linear infinite;
+  -ms-animation: home-header-img 10s linear infinite;
+  -o-animation: home-header-img 10s linear infinite;
+  animation: home-header-img 10s linear infinite;
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/cookie-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-button {
+  font-size: 2rem;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 0.6rem;
+}

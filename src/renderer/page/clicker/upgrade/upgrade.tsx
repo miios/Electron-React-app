@@ -12,11 +12,11 @@ export const UpgradeList = (props) => {
         <ul>
           {getInitialUpgrades.map(upgrade => (
             <li key={upgrade.id} className="Upgrade">
-              <div>
+              <div className="upgrade-buy-title">
                 {upgrade.name} ({upgrade.cps}cps): {upgrade.cost}c
               </div>
               <button
-                className="buyBtn"
+                className="upgrade-buy-button"
                 disabled={score < upgrade.cost}
                 onClick={() => {
                   handleScore(-upgrade.cost)
